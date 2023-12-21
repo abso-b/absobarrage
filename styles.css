@@ -274,4 +274,8 @@ header h1 {
 	.text-container {
 		word-wrap: break-word;
 	}
+	
+	.content {
+        margin-top: 100px; /* Adjust this value as needed to push content below the header */
+    }
 }
