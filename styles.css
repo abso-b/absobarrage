@@ -261,4 +261,17 @@ header h1 {
     }
 
     /* その他、スマートフォン向けのスタイル調整を追加 */
+	.image-item img {
+        max-width: 100%;
+		height: auto;
+    }
+	
+	.image-container img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	.text-container {
+		word-wrap: break-word;
+	}
 }
