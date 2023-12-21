@@ -258,7 +258,7 @@ header h1 {
     .content {
         padding: 10px; /* コンテンツのパディングを調整 */
         margin: 20px auto; /* マージンを調整 */
-		margin-top: 200px; /* Adjust this value as needed to push content below the header */
+		margin-top: 100px; /* Adjust this value as needed to push content below the header */
     }
 
     /* その他、スマートフォン向けのスタイル調整を追加 */
