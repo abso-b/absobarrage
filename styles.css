@@ -276,4 +276,9 @@ header h1 {
 		word-wrap: break-word;
 	}
 	
+	.carousel-item img {
+        height: 200px; /* 適切な高さに調整 */
+        object-fit: cover; /* 画像のアスペクト比を維持 */
+    }
+	
 }
