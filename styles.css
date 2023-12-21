@@ -1,0 +1,235 @@
+/* ベーシックリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding-top: 80px; /* ヘッダーの高さに合わせて調整 */
+    background: #f4f4f4; /* 背景色を少し暗めの色に設定 */
+    color: #333; /* テキストの色 */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    padding-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #fff; /* セクションの背景色を白に設定 */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* 影をつける */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    /*position: fixed;*/
+	position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        margin: auto;
+    }
+    
+    header nav ul {
+        padding-top: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+    }
+    
+    section {
+        margin: 40px auto;
+        max-width: 750px;
+    }
+}
+
+/* ポートフォリオ内のイメージサイズ */
+.portfolio-image {
+    width: 100%; 
+    height: auto; 
+    max-width: 300px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    text-align: center; /* テキストを中央揃えにする */
+}
+
+.work-image {
+    width: 100%; 
+    height: auto; 
+    max-width: 600px; /* または適切なサイズ */
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* 縦方向に要素を並べる */
+    align-items: center; /* 中央揃え */
+}
+
+.image-item {
+    width: 600px; /* または希望の幅 */
+    margin: 10px; /* 画像間のスペース */
+    text-align: center; /* テキストを中央揃えにする */
+}
+
+.image-item img {
+    width: 100%; /* 画像の幅をコンテナに合わせる */
+}
+
+
+body {
+    background-image: url('bg04.png'); 
+    background-repeat: repeat; 
+    /*background-size: contain; */
+	background-size: 1000px 1000px;
+	position: relative;
+
+}
+
+html{
+    height: 100%;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* 半透明の黒色オーバーレイ */
+    z-index: -1;
+	height: 100%;
+    min-height: 100%;
+}
+
+.content {
+  background-color: #ffffff; /* 背景を白に設定 */
+  padding: 20px; /* コンテンツの周囲に余白を追加 */
+  text-align: center;
+  
+  max-width: 750px; /* sectionと同じ幅に設定 */
+  margin: 40px auto; /* 上下のマージンを適用し、左右は自動で中央揃えに */
+  margin-top: 150px; /* ヘッダーの高さに応じて調整 */
+}
+
+header h1 {
+  /*font-size: 24px;*/
+  color: #ffffff; /* テキストの色を白に設定 */
+  text-shadow: 
+    -1px -1px 0 #000,  /* 左上の影 */
+     1px -1px 0 #000,  /* 右上の影 */
+    -1px 1px 0 #000,  /* 左下の影 */
+     1px 1px 0 #000;  /* 右下の影 */
+	 
+}
+
+/*
+.content h1 {
+  color: #ffffff; /* テキストの色を白に設定 *//*
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000; /* 各方向に黒色の影をつける *//*
+}
+*/
+
+.work-section h2 {
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    text-align: center;
+}
+
+
+/* カルーセルの画像サイズをコントロールするスタイル */
+.carousel-item img {
+    width: 100%; /* カルーセルの幅に合わせて調整 */
+    max-height: 500px; /* 最大の高さを設定 */
+    object-fit: cover; /* 画像のアスペクト比を保ちつつ、コンテナに合わせて調整 */
+}
+
+.carousel-caption h3 {
+    -webkit-text-stroke: 1.0px #000; /* WebKitブラウザ向け */
+    text-stroke: 1px #000; /* 標準のプロパティ、サポート外のブラウザもあるので注意 */
+    color: #fff; /* テキストの色 */
+	font-weight: bold; /* テキストを太文字にする */
+}
+
+.carousel-caption p {
+    -webkit-text-stroke: 0.5px #000;
+    text-stroke: 0.5px #000;
+    color: #fff;
+	font-weight: bold; /* テキストを太文字にする */
+}
+
+#about {
+    margin-top: 150px; /* ヘッダーの高さに応じて調整 */
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	gap: 20px;
+}
+
+.portfolio-section {
+    margin-top: 150px; /* ヘッダーの高さに応じて調整 */
+}
+
