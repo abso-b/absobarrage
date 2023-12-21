@@ -233,3 +233,32 @@ header h1 {
     margin-top: 150px; /* ヘッダーの高さに応じて調整 */
 }
 
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* スマートフォンではヘッダーの高さを調整 */
+    }
+
+    header {
+        padding: 15px 0; /* ヘッダーのパディングを調整 */
+    }
+
+    header h1 {
+        font-size: 20px; /* タイトルのフォントサイズを小さく */
+    }
+
+    .portfolio-item, .work-image, .image-item {
+        width: 100%; /* 画像とコンテンツの幅を画面幅に合わせる */
+        margin: 5px 0; /* 画像間のマージンを調整 */
+    }
+
+    .image-container {
+        flex-direction: column; /* 画像を縦に並べる */
+    }
+
+    .content {
+        padding: 10px; /* コンテンツのパディングを調整 */
+        margin: 20px auto; /* マージンを調整 */
+    }
+
+    /* その他、スマートフォン向けのスタイル調整を追加 */
+}
